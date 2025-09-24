@@ -9,7 +9,7 @@ namespace ejercicio_2.Controllers
             int contador = 0;
             if (!string.IsNullOrEmpty(frase))
             {
-                string vocales = "aeiouáéíóúAEIOUÁÉÍÓÚ";
+                string vocales = "aeiou";
                 foreach (char c in frase)
                 {
                     if (vocales.Contains(c)) contador++;
