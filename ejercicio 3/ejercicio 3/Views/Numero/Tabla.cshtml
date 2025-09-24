@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Tabla";
+    <h2>Tabla de multiplicar del @ViewBag.Numero</h2>
+<ul>
+@for (int i = 1; i <= 10; i++)
+{
+    <li>@ViewBag.Numero x @i = @(ViewBag.Numero * i)</li>
+}
+</ul>
+}
+
+
+
