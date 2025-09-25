@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Convertir";
+}
+<@{
+ViewData["Title"] = "Conversión de Temperatura";
+        }
+
+<h2>Conversión de Fahrenheit a Celsius</h2>
+
+<form asp-action="Convertir" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label for="fahrenheit">Temperatura (°F):</label>
+        <input type="number" step="0.01" class="form-control" id="fahrenheit" name="fahrenheit" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Convertir</button>
+</form>
+
+@if (ViewBag.Fahrenheit != null)
+{
+        <hr />
+        <h4>Resultado:</h4>
+        <p><strong>Fahrenheit:</strong> @ViewBag.Fahrenheit °F</p>
+        <p><strong>Celsius:</strong> @ViewBag.Celsius °C</p>
+}
+
+
